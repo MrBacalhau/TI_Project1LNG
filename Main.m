@@ -14,5 +14,5 @@ elseif(ext== '.bmp')
 end
     
     hist=drawhist(Y);
-    disp('Entropia de %s: %f\n', name, entropia(hist));
+    %disp('Entropia de %s: %f\n', name, entropia(hist));
 
