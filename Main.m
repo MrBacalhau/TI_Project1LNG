@@ -1,3 +1,4 @@
+
 file='dados\english.txt';
 [filepath,name,ext] = fileparts(file);
 
@@ -15,3 +16,4 @@ end
     
     %hist=drawhist(id, inf);
     %disp('Entropia de %s: %f\n', name, entropia(hist));
+
