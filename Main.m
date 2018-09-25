@@ -1,15 +1,16 @@
-file='dados\song01.wav';
+file='dados\english.txt';
 [filepath,name,ext] = fileparts(file);
 
 if(ext == '.txt')
     id = fopen(file);
     inf = fread(id);
+    fclose(id);
 elseif(ext == '.wav')
     [id, fs]= audioread(file);
     inf= audioinfo(file);
 elseif(ext== '.bmp')
-   % id=
-    %inf=
+    id=imageread(file);
+    inf=imageinfo(file);
 end
     
     %hist=drawhist(id, inf);
