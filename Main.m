@@ -1,4 +1,3 @@
-
 file='dados\english.txt';
 [filepath,name,ext] = fileparts(file);
 
