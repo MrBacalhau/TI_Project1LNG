@@ -9,10 +9,10 @@ elseif(ext == '.wav')
     [Y, fs]= audioread(file);
     inf= audioinfo(file);
 elseif(ext== '.bmp')
-    Y=imageread(file);
-    inf=imageinfo(file);
+    Y=imread(file);
+    inf=imfinfo(file);
 end
     
     hist=drawhist(Y);
-    disp('Entropia de %s: %f\n', name, entropia(hist));
+    entropia(Y);
 
