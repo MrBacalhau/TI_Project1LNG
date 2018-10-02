@@ -1,4 +1,4 @@
-file='dados\english.txt';
+file='dados\homerbin.bmp';
 [filepath,name,ext] = fileparts(file);
 
 if(ext == '.txt')
@@ -14,5 +14,5 @@ elseif(ext== '.bmp')
 end
     
     hist=drawhist(Y);
-    entropia(Y);
+    entropia(hist);
 

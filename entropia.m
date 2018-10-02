@@ -1,5 +1,5 @@
 function [entropia] = entropia( Y )
-    array = hist(Y) / numel(Y);
+    array = Y / sum(Y);
     
     % Set array zeros to 0 
     % log2 (0) = error which messes up entropy calc
