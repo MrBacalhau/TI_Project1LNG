@@ -26,7 +26,8 @@ switch exe
         resposta = sum( array .* HL);
         fprintf('Média de bits por símbolo: %f\n',resposta)
     case '5'
-            
+        histAgr=drawhistAgrupada(Y, true);
+        entropiaAgrupada(histAgr);
     case '6'
         
     otherwise
