@@ -18,7 +18,8 @@ exe=input('Que exercicio?\n', 's');
 switch exe
     case '3'
         hist=drawhist(Y, true);
-        entropia(hist);
+        entrop = entropia(hist);
+        fprintf('Entropia de: %f\n',entrop)
     case '4'
         hist=drawhist(Y, false);
         HL = hufflen(hist);
@@ -26,8 +27,9 @@ switch exe
         resposta = sum( array .* HL);
         fprintf('Média de bits por símbolo: %f\n',resposta)
     case '5'
-        histAgr=drawhistAgrupada(Y, true);
-        entropiaAgrupada(histAgr);
+        alfabeto = unique(Y);
+        entrop_agrup = drawhistAgrupada(Y,alfabeto);
+        fprintf('Entropia agrupada de: %f\n',entrop_agrup)
     case '6'
         
     otherwise
