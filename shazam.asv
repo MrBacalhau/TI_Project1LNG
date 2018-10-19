@@ -1,14 +1,14 @@
 function [ valores ] = shazam( Y, Yquery, passo, alphabeto )
-        infmut=[];       
-        histquery=histc(Yquery, alphabeto); 
-        Pquery=histquery/sum(histquery);  
+        infmut=[];         %array info mutua
+        histquery=histc(Yquery, alphabeto); %contagem de elementos query 
+        Pquery=histquery/sum(histquery);  %Probabilidade de query
     for i=1: passo:abs(length(Y)-length(Yquery)) 
-        Ysearch=Y(i:i+length(Yquery)-1);   
-        histsearch=histc(Ysearch, alphabeto); 
-        Psearch=histsearch/sum(histsearch);    
+        Ysearch=Y(i:i+length(Yquery));    %divisao do Y em tamanho do query
+        histsearch=histc(Ysearch, alphabeto); %histograma do intervalo 
+        Psearch=histsearch/sum(histsearch);
         %PaPb=Pquery.*Psearch;
         %PaPb(PaPb == 0) = 1;
-        eqCount=zeros(length(alphabeto)); 
+        eqCount=zeros(length(alphabeto),length(alphabeto));
         for j=1:length(Yquery)
             %if(Ysearch(j)==Yquery(j))
             a=find(alphabeto==Ysearch(j));

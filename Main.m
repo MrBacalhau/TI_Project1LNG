@@ -47,6 +47,7 @@ switch exe
         [valores]=shazam(Yquery, Y, passo, alphabeto);
         figure(1);
         plot(valores);
+        
     case '6c'
         alphabeto = unique(Y);
         query=input('which query file?\n','s');
